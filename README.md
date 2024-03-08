@@ -40,12 +40,15 @@ The `cx` function is a utility for generating class names. It's inspired by the 
 ```twig
 {# Generate a single class name #}
 {{ cx('text-red-500') }}
+{# Output: `text-red-500` #}
 
 {# Generate multiple class names #}
 {{ cx('text-red-500', 'bg-blue-500') }}
+{# Output: `text-red-500 bg-blue-500` #}
 
 {# Generate class names based on a condition #}
-{{ cx('text-red-500', 'bg-blue-500', { 'text-red-500': true, 'bg-blue-500': false }) }}
+{{ cx('text-red-500', 'bg-blue-500', { 'text-lg': true, 'text-sm': false }) }}
+{# Output: `text-red-500 bg-blue-500 text-lg` #}
 ```
 
 ### CVA
@@ -57,18 +60,18 @@ The `cva` function is a utility for generating component variants. It's inspired
 {% set button = cva('block outline-none', {
   variants: {
     display: {
-      'primary': [
+      primary: [
         'bg-blue-500 text-white',
       ],
-      'secondary': [
+      secondary: [
         'bg-purple-500 text-white',
       ],
     },
     size: {
-      'base': [
+      base: [
         'py-2 px-4 text-base',
       ],
-      'large': [
+      large: [
         'py-3 p-6 text-lg',
       ],
     },
@@ -80,15 +83,34 @@ The `cva` function is a utility for generating component variants. It's inspired
 }) %}
 
 {# Generate various button variants #}
+
 <button class="{{ button.generate() }}">
   Click me
 </button>
+{#
+Output:
+<button class="block outline-none bg-blue-500 text-white py-2 px-4 text-base">
+  Click me
+</button>
+#}
 
 <button class="{{ button.generate({ display: 'secondary' }) }}">
   Click me
 </button>
+{#
+Output:
+<button class="block outline-none bg-purple-500 text-white py-2 px-4 text-base">
+  Click me
+</button>
+#}
 
 <button class="{{ button.generate({ display: 'primary', size: 'large' }) }}">
   Click me
 </button>
+{#
+Output:
+<button class="block outline-none bg-blue-500 text-white py-3 p-6 text-lg">
+  Click me
+</button>
+#}
 ```

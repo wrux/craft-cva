@@ -2,14 +2,22 @@
   "name": "wrux/craft-cva",
   "description": "Class Variance Authority port for CraftCMS.",
   "type": "craft-plugin",
+  "keywords": ["craft", "cms", "craftcms", "craft-plugin"],
   "license": "mit",
   "support": {
     "email": "hello@wrux.com",
     "issues": "https://github.com/wrux/craft-cva/issues?state=open",
+    "changelogUrl": "https://raw.githubusercontent.com/wrux/blocky/master/CHANGELOG.md",
     "source": "https://github.com/wrux/craft-cva",
     "docs": "https://github.com/wrux/craft-cva",
     "rss": "https://github.com/wrux/craft-cva/releases.atom"
   },
+  "authors": [
+    {
+      "name": "Callum Bonnyman",
+      "homepage": "https://wrux.com"
+    }
+  ],
   "require": {
     "php": ">=8.1.0",
     "craftcms/cms": "^4.8.0"
@@ -25,7 +33,7 @@
   },
   "extra": {
     "handle": "cva",
-    "name": "cva",
+    "name": "Class Variance Authority",
     "developer": "Callum Bonnyman",
     "documentationUrl": "https://github.com/wrux/craft-cva",
     "class": "wrux\\cva\\ClassVarianceAuthority"

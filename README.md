@@ -1,3 +1,5 @@
+<img alt="Craft Class Variance Authority" src="resources/img/cva.png" style="height:80px" />
+
 # Craft Class Variance Authority
 
 Class Variance Authority plugin for CraftCMS.

@@ -1,4 +1,5 @@
-# Release Notes for craft-class-variance-authority
+# Release Notes for Craft Class Variance Authority
 
-## 1.0.0
+## 0.0.1
+
 - Initial release

@@ -1,56 +1,64 @@
 {
-  "name": "wrux/craft-cva",
-  "description": "Class Variance Authority port for CraftCMS.",
-  "type": "craft-plugin",
-  "keywords": ["craft", "cms", "craftcms", "craft-plugin"],
-  "license": "mit",
-  "support": {
-    "email": "hello@wrux.com",
-    "issues": "https://github.com/wrux/craft-cva/issues?state=open",
-    "changelogUrl": "https://raw.githubusercontent.com/wrux/blocky/master/CHANGELOG.md",
-    "source": "https://github.com/wrux/craft-cva",
-    "docs": "https://github.com/wrux/craft-cva",
-    "rss": "https://github.com/wrux/craft-cva/releases.atom"
-  },
-  "authors": [
-    {
-      "name": "Callum Bonnyman",
-      "homepage": "https://wrux.com"
-    }
-  ],
-  "require": {
-    "php": ">=8.1.0",
-    "craftcms/cms": "^4.8.0"
-  },
-  "require-dev": {
-    "craftcms/ecs": "dev-main",
-    "craftcms/phpstan": "dev-main"
-  },
-  "autoload": {
-    "psr-4": {
-      "wrux\\cva\\": "src/"
-    }
-  },
-  "extra": {
-    "handle": "cva",
-    "name": "Class Variance Authority",
-    "developer": "Callum Bonnyman",
-    "documentationUrl": "https://github.com/wrux/craft-cva",
-    "class": "wrux\\cva\\ClassVarianceAuthority"
-  },
-  "scripts": {
-    "check-cs": "ecs check --ansi",
-    "fix-cs": "ecs check --ansi --fix",
-    "phpstan": "phpstan --memory-limit=1G"
-  },
-  "config": {
-    "sort-packages": true,
-    "platform": {
-      "php": "8.1.0"
-    },
-    "allow-plugins": {
-      "yiisoft/yii2-composer": true,
-      "craftcms/plugin-installer": true
-    }
-  }
+	"name": "wrux/craft-cva",
+	"description": "Class Variance Authority port for CraftCMS.",
+	"type": "craft-plugin",
+	"keywords": [
+		"craft",
+		"cms",
+		"craftcms",
+		"craft-plugin"
+	],
+	"license": "mit",
+	"support": {
+		"email": "hello@wrux.com",
+		"issues": "https://github.com/wrux/craft-cva/issues?state=open",
+		"changelogUrl": "https://raw.githubusercontent.com/wrux/blocky/master/CHANGELOG.md",
+		"source": "https://github.com/wrux/craft-cva",
+		"docs": "https://github.com/wrux/craft-cva",
+		"rss": "https://github.com/wrux/craft-cva/releases.atom"
+	},
+	"authors": [
+		{
+			"name": "Callum Bonnyman",
+			"homepage": "https://wrux.com"
+		}
+	],
+	"require": {
+		"php": ">=8.2.0",
+		"craftcms/cms": "^5.0.0"
+	},
+	"require-dev": {
+		"craftcms/ecs": "dev-main",
+		"craftcms/phpstan": "dev-main",
+		"craftcms/rector": "dev-main"
+	},
+	"autoload": {
+		"psr-4": {
+			"wrux\\cva\\": "src/"
+		}
+	},
+	"extra": {
+		"handle": "cva",
+		"name": "Class Variance Authority",
+		"developer": "Callum Bonnyman",
+		"documentationUrl": "https://github.com/wrux/craft-cva",
+		"class": "wrux\\cva\\ClassVarianceAuthority"
+	},
+	"scripts": {
+		"check-cs": "ecs check --ansi",
+		"fix-cs": "ecs check --ansi --fix",
+		"phpstan": "phpstan --memory-limit=1G"
+	},
+	"config": {
+		"sort-packages": true,
+		"platform": {
+			"php": "8.2.0"
+		},
+		"allow-plugins": {
+			"yiisoft/yii2-composer": true,
+			"craftcms/plugin-installer": true
+		}
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true
 }
